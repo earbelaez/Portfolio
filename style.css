@@ -30,7 +30,7 @@ body {
     width: 100%;
 }
 
-/* Loading Screen Styles */
+/* --- SECCIÓN DE CARGA ACTUALIZADA CON ANIMACIÓN --- */
 .loading{
     z-index: 200;
     position: fixed;
@@ -48,8 +48,21 @@ body {
     padding: 20px;
 
     color: var(--color-primary);
-    background-color: var(--color-background)
+    background-color: var(--color-background);
 }
+
+/* Efecto de latido/respiración en el texto "Cargando" */
+.loading h2 {
+    animation: breath 2s ease-in-out infinite;
+}
+
+/* Efecto de puntos suspensivos automáticos */
+.loading h2::after {
+    content: '';
+    animation: dots 1.5s steps(4, end) infinite;
+}
+
+/* --- FIN DE SECCIÓN DE CARGA --- */
 
 /*Welcome popup Styles*/
 .welcome{
@@ -249,35 +262,44 @@ body {
         font-size: 16px; 
     }
 
-    /* Skills Section */
     .skills-content {
         grid-template-columns: 1fr;
     }
 
-    /* Projects Section */
     .project-grid {
         grid-template-columns: 1fr;
     }
 
-    /* Contact Section */
     .contact-links {
         grid-template-columns: 1fr;
     }
 
-    /* Ensure consistent project card sizing */
     .project-card {
         display: flex;
         flex-direction: column;
     }
 
     .project-image {
-        height: 250px; /* Slightly larger for mobile */
+        height: 250px; 
     }
 }
 
-/* Ensure images are responsive */
 .project-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* --- KEYFRAMES PARA LAS ANIMACIONES --- */
+
+@keyframes breath {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(0.95); opacity: 0.7; }
+}
+
+@keyframes dots {
+    0% { content: ''; }
+    25% { content: '.'; }
+    50% { content: '..'; }
+    75% { content: '...'; }
 }
