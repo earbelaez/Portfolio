@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&family=Sono:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Portafolio</title>
+</head>
+<body>
+    <div class="portfolio">
+        <canvas id="portfolio-canvas"></canvas>
+    </div>
+
+    <div id="loading" class="loading">
+        <h2>Cargando</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <div id="welcome" class="welcome">
+        <div class="welcome-content">
+            <button id="welcome-exit-button" class="popup-close">&times;</button>
+            <div class="popup-body">
+                    <h2>Lorem Ipsum</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <button id="popup-exit-button" class="popup-close">&times;</button>
+            <div class="popup-body">
+                <section class="portfolio-section" id="about-me">
+                    <h2>---</h2>
+                    <div class="about-me-content">
+                        <div class="personal-info">
+                            <p><strong>ID:</strong> ---</p>
+                            <p><strong>Status:</strong> ---</p>
+                            <p><strong>Loc:</strong> ---</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                </section>
+    
+                <section class="portfolio-section" id="skills">
+                    <h2>---</h2>
+                    <div class="skills-content">
+                        <div class="skill-category">
+                            <h3>---</h3>
+                            <ul>
+                                <li>Lorem ipsum</li>
+                                <li>Dolor sit</li>
+                                <li>Amet</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3>---</h3>
+                            <ul>
+                                <li>Consectetur</li>
+                                <li>Adipiscing</li>
+                                <li>Elit</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+    
+                <section class="portfolio-section" id="work-experience">
+                    <h2>---</h2>
+                    <div class="experience-list">
+                        <div class="experience-item">
+                            <h3>---</h3>
+                            <p><strong>---</strong> | ---</p>
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+    
+                <section class="portfolio-section" id="education">
+                    <h2>---</h2>
+                    <div class="education-list">
+                        <div class="education-item">
+                            <h3>---</h3>
+                            <p><strong>---</strong> | ---</p>
+                        </div>
+                    </div>
+                </section>
+    
+                <section class="portfolio-section" id="projects">
+                    <h2>---</h2>
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./public/Thumbnail_Portfolio.png" alt="---">
+                            </div>
+                            <div class="project-details">
+                                <h3>---</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="project-links">
+                                    <a href="#" target="_blank">---</a>
+                                    <a href="#" target="_blank">---</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+                <section class="portfolio-section" id="contact">
+                    <h2>---</h2>
+                    <div class="contact-links">
+                        <div class="contact-item">
+                            <strong>---:</strong> <a href="#" target="_blank">---</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>---:</strong> ---
+                        </div>
+                        <div class="contact-item">
+                            <strong>---:</strong> ---
+                        </div>
+                        <div class="contact-item">
+                            <strong>---:</strong> <a href="#" target="_blank">---</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@v0.149.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.149.0/examples/jsm/"
+          }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
